@@ -32,7 +32,7 @@ function addMatrixElements(matrix) {
   for(var i = 0; i < matrix.length; i++) {
     /* fix counter variables in the second loop */
     for(var m = 0; m < matrix.length; m++) {
-      result = result + matrix[i][m];
+      result += matrix[i][m];
     }
   }
   return result;
@@ -45,7 +45,7 @@ function sendDataToClient() {
 
   var userObject = {
     handle: 'neo',
-    authenticated: false
+    authenticated: true
   }
 
   function authenticateUser(obj, username) {
@@ -62,5 +62,5 @@ function sendDataToClient() {
     }
   }
   authenticateUser(userObject, 'neo')
-  return userObject
+  return userObject;
 }
