@@ -41,7 +41,7 @@ function addMatrixElements(matrix) {
 
 // This function is returning the wrong userObject data. It should be returning
 // Neo's information and not Morpheus'.  Fix it!
-function sendDataToClient() {
+function sendDataToClient(obj, username) {
 
   var userObject = {
     handle: 'neo',
